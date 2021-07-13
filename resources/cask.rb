@@ -21,7 +21,7 @@
 
 chef_version_for_provides '< 14.0' if respond_to?(:chef_version_for_provides)
 
-property :cask_name, String, regex: %r{^[\w/-@]+$}, name_property: true
+property :cask_name, String, regex: %r{^[\w/\-@]+$}, name_property: true
 property :options, String
 property :install_cask, [true, false], default: true
 property :homebrew_path, String, default: '/usr/local/bin/brew'
